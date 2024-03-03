@@ -17,7 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  let temp=[34,45,56,67,78,89],time=[23,34,45,67,78,65];
+  res.render('index',{temp:temp,time:time});
 });
 
 app.post('/addTemperature', async (req, res) => {
